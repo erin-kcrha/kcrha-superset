@@ -103,3 +103,4 @@ class SamplesRequestSchema(Schema):
         validate=validate.Range(min=1, max=app.config.get("SAMPLES_ROW_LIMIT", 1000)),
         load_default=app.config.get("SAMPLES_ROW_LIMIT", 1000),
     )
+    dashboard_id = fields.Integer(required=False, allow_none=True, load_default=None)
