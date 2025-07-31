@@ -3342,6 +3342,7 @@ class TestDatasetApi(SupersetTestCase):
                 published=True,
             )
 
+            self.logout()
             self.login(test_user.username)
 
             uri = f"api/v1/dataset/{dataset.id}/drill_info/?q=(dashboard_id:{dash.id})"
@@ -3396,6 +3397,8 @@ class TestDatasetApi(SupersetTestCase):
                 roles=user_role_ids,
                 published=True,
             )
+
+            self.logout()
             self.login(test_user.username)
 
             uri = f"api/v1/dataset/{dataset.id}/drill_info/?q=(dashboard_id:{dash.id})"
@@ -3480,6 +3483,7 @@ class TestDatasetApi(SupersetTestCase):
                 published=True,
             )
 
+            self.logout()
             self.login(test_user.username)
 
             uri = f"api/v1/dataset/{dataset.id}/drill_info/"
